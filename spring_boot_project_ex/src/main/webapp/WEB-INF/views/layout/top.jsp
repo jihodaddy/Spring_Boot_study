@@ -5,26 +5,26 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>top</title>	
-		<link href="css/common.css" rel="stylesheet" type="text/css">
-		<link href="css/index.css" rel="stylesheet" type="text/css">
-		<link href="css/menu.css" rel="stylesheet" type="text/css">
-		<link href="css/slideShow.css" rel="stylesheet" type="text/css">
-		<link href="css/tabMenu.css" rel="stylesheet" type="text/css">
-		<link href="css/product.css" rel="stylesheet" type="text/css">
-		<script src="js/jquery-3.6.0.min.js"></script>
-		<script src="js/subMenu.js"></script>
-		<script src="js/slideShow.js"></script>
-		<script src="js/tabMenu.js"></script>
-		<script src="js/index.js"></script>
+		<title>프로젝트 예제 : index </title>	
+		<link href="<c:url value='/css/common.css'/>" rel="stylesheet" type="text/css">
+		<link href="<c:url value='/css/index.css'/>" rel="stylesheet" type="text/css">
+		<link href="<c:url value='/css/menu.css'/>" rel="stylesheet" type="text/css">
+		<link href="<c:url value='/css/slideShow.css'/>" rel="stylesheet" type="text/css">
+		<link href="<c:url value='/css/tabMenu.css'/>" rel="stylesheet" type="text/css">
+		<link href="<c:url value='/css/product.css'/>" rel="stylesheet" type="text/css">
+		<script src="<c:url value='/js/jquery-3.6.0.min.js'/>"></script>
+		<script src="<c:url value='/js/subMenu.js'/>"></script>
+		<script src="<c:url value='/js/slideShow.js'/>"></script>
+		<script src="<c:url value='/js/tabMenu.js'/>"></script>
+		<script src="<c:url value='/js/index.js'/>"></script>
 	</head>
 	<body>
 		
 			<header>
 				<div id="headerBox">
-					<div id="logoBox"><a href="index.html"><img src="image/logo.png" id="logoImg"></a></div>
+					<div id="logoBox"><a href="<c:url value='/'/>"><img src="<c:url value='/image/logo.png'/>" id="logoImg"></a></div>
 					<div id="topMenuBox">
-		
+						
 						<!-- 로그인 하지 않은 경우 보여줄 메뉴 항목  -->
 						<c:if test="${empty sessionScope.sid }">
 							<a href="<c:url value='/loginForm'/>">로그인</a> 	
@@ -37,8 +37,10 @@
 						${sessionScope.sid} 님 환영합니다!
 						&nbsp;&nbsp;
 						<a href="<c:url value='/logout'/>">로그아웃</a> 	
-						게시판 이벤트 장바구니 MyPage
-						</c:if>	
+						게시판 이벤트 
+						<a href="<c:url value='/product/cartList'/>">장바구니</a>
+						MyPage
+						</c:if>						
 					</div>
 				</div>
 			</header>
@@ -104,6 +106,6 @@
 					</div>
 				</div> <!-- subMenuBox 끝 -->
 			</nav>
-		
+			
 	</body>
 </html>

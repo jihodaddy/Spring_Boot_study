@@ -9,7 +9,7 @@ public class MemberVO {
 	private String memEmail;
 	private Date memJoinDate;
 	
-	public MemberVO() {}
+	public MemberVO() { }
 
 	public String getMemId() {
 		return memId;
@@ -50,8 +50,4 @@ public class MemberVO {
 	public void setMemJoinDate(Date memJoinDate) {
 		this.memJoinDate = memJoinDate;
 	}
-	
-	
-	
-	
 }

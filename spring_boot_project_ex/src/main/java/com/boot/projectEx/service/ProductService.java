@@ -12,48 +12,55 @@ import com.boot.projectEx.model.ProductVO;
 
 @Service
 public class ProductService implements IProductService {
-	// MyBatis  사용하는 경우의 DI 설정
+	//MyBatis 사용하는 경우
 	@Autowired
 	@Qualifier("IProductDAO")
 	IProductDAO dao;
 
-	public ArrayList<ProductVO> listCtgProduct(String ctgId){
-		return dao.listCtgProduct(ctgId);
-	}
-	
 	@Override
-	public ArrayList<ProductVO> listAllProduct() {		
-		return dao.listAllProduct();
+	public ArrayList<ProductVO> listCtgProduct(String ctgId) {		
+		return dao.listCtgProduct(ctgId) ;
+	}
+
+	@Override
+	public ArrayList<ProductVO> listAllProduct() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public void insertProduct(ProductVO prdVo) {
-		dao.insertProduct(prdVo);
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public void updateProduct(ProductVO prdVo) {
-		dao.updateProduct(prdVo);
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
 	public void deleteProduct(String prdNo) {
-		dao.deleteProduct(prdNo);
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
-	public ProductVO detailViewProduct(String prdNo) {		
+	public ProductVO detailViewProduct(String prdNo) {
 		return dao.detailViewProduct(prdNo);
 	}
+
 	@Override
 	public String prdNoCheck(String prdNo) {
-		return dao.prdNoCheck(prdNo);
+		// TODO Auto-generated method stub
+		return null;
 	}
+
 	@Override
-	public ArrayList<ProductVO> productSearch(HashMap<String, Object>map){
-		return dao.productSearch(map);
+	public ArrayList<ProductVO> productSearch(HashMap<String, Object> map) {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	
+
 }
-
-

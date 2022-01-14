@@ -5,7 +5,8 @@
  */
  
  $(document).ready(function(){
-	$('#idCheck').on('click', function(){
+	
+	$('#idCheck').on('click', function(){		
 		event.preventDefault();
 		
 		$.ajax({

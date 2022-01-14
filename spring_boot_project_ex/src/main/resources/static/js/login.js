@@ -10,7 +10,7 @@
 			type:"post",
 			url:"login",
 			data:{"id": $('#id').val(),
-					  "pwd":  $('#pwd').val()},  /* 컨트롤러에서 받을 때 : id, pwd로 받음*/
+					  "pwd":  $('#pwd').val()},  /* 컨트롤러에서 받을 때 : id, pw로 받음*/
 			dataType:'text',
 			success:function(result){
 				if(result == "success"){
@@ -22,7 +22,6 @@
 			},
 			error:function(data, textStatus){
 				alert("전송 실패");
-				
 			}
 		});
 	});	

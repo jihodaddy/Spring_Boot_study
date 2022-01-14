@@ -13,15 +13,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.boot.projectEx.model.MemberVO;
 import com.boot.projectEx.service.MemberService;
 
-
 @Controller
 public class MemberController {
 	@Autowired
 	MemberService service;
+	
 	// 로그인 폼으로 이동
 	@RequestMapping("/loginForm")
 	public String loginForm() {
-		return "member/loginForm";
+		return "/member/loginForm";
 	}
 	
 	// 로그인 처리 : id와 pwd 전달 받아서 로그인 체크
@@ -43,37 +43,41 @@ public class MemberController {
 		return result;
 	}
 	
-	//로그아웃 처리
+	//로그아웃
 	@RequestMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
 		return "redirect:/";
 	}
 	
-	// 회원가입
-	
 	// 회원가입 폼으로 이동
+	// 로그인 폼으로 이동
 		@RequestMapping("/joinForm")
 		public String joinForm() {
-			return "member/joinForm";
+			return "/member/joinForm";
 		}
 		
-		//회원ID 중복 확인
+		
+		// 사용자 아이디 중복 확인
 		@ResponseBody
 		@RequestMapping("/memIdCheck")
 		public String memIdCheck(@RequestParam("memId") String memId) {
-			// 서비스 호출 -> DAO -> Mapper -> memId가 존재하면 memId 반환
+			// 서비스 호출 -> DAO -> Mapper -> prdNo가 존재하면 prdNo 반환
 			String memId_result = service.memIdCheck(memId);
 			
 			String result = "use";
-			if(memId_result != null) // memId_result가 받은 값이 있으면 (널이 아니면)
+			if(memId_result != null) // prdNo_result가 받은 값이 있으면 (널이 아니면)
 				result = "no_use";
 			
 			return result;
 		}
-		
 }
 
 
-	  
+
+
+
+
+
+
 

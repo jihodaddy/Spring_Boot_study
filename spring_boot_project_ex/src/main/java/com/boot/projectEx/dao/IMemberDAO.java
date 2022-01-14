@@ -5,6 +5,6 @@ import java.util.HashMap;
 import com.boot.projectEx.model.MemberVO;
 
 public interface IMemberDAO {
-	MemberVO loginCheck(HashMap<String, Object>map);
-	public String memIdCheck(String memId);
+	MemberVO loginCheck(HashMap<String, Object> map);
+	String memIdCheck(String memId);
 }

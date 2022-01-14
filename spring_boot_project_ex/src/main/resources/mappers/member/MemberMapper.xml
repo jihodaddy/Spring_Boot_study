@@ -18,8 +18,7 @@
 	</select>
 	
 	<!-- ID 중복 확인 -->
-  		<select id="memIdCheck" resultType="string" parameterType="string">
-  			SELECT memId FROM member WHERE memId =#{memId}
-  		</select>
-	
+		<select id="memIdCheck" resultType="string" parameterType="string">
+			SELECT memId FROM member WHERE memId =#{memId}
+		</select>
 </mapper>

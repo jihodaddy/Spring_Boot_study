@@ -1,15 +1,15 @@
 package com.boot.projectEx.model;
 
 public class ProductVO {
-	private String prdNo; 
+	private String prdNo;
 	private String prdName;
-    private int prdPrice;
-    private String prdCompany;
-    private int prdStock;
-    private String prdDescript;
-    private String prdImg;
-    private String ctgId;
-    
+	private int prdPrice;
+	private String prdCompany;
+	private int prdStock;
+	private String prdDescript;
+	private String prdImg;
+	private String ctgId;
+	
 	public String getPrdNo() {
 		return prdNo;
 	}
@@ -52,12 +52,13 @@ public class ProductVO {
 	public void setPrdImg(String prdImg) {
 		this.prdImg = prdImg;
 	}
+	
 	public String getCtgId() {
 		return ctgId;
 	}
 	public void setCtgId(String ctgId) {
 		this.ctgId = ctgId;
 	}
-    
-    
+	
+	
 }

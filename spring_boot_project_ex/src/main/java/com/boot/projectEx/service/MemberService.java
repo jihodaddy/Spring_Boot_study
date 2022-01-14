@@ -11,15 +11,15 @@ import com.boot.projectEx.model.MemberVO;
 
 @Service
 public class MemberService implements IMemberService {
-@Autowired
-@Qualifier("IMemberDAO")
-IMemberDAO dao;
+	@Autowired
+	@Qualifier("IMemberDAO")
+	IMemberDAO dao;
 	
 	@Override
-	public MemberVO loginCheck(HashMap<String, Object> map) {
-		// TODO Auto-generated method stub
+	public MemberVO loginCheck(HashMap<String, Object> map) {		
 		return dao.loginCheck(map);
 	}
+	
 	@Override
 	public String memIdCheck(String memId) {
 		return dao.memIdCheck(memId);
